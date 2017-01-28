@@ -1,0 +1,36 @@
+---
+# connection
+ansible_ssh_host: street.ars.is
+madek_external_hostname: street.ars.is
+
+# storage
+setup_storage_directories: true
+madek_storage_dir: /srv/madekdata
+madek_file_storage_dir: /srv/madekdata/attachments
+madek_thumbnail_storage_dir: /srv/madekdata/attachments
+madek_tmp_dir: /srv/madekdata/tmp
+
+# audio and videos previews
+zencoder_enabled: false
+# zencoder_api_key: '{{zhdk_zencoder_api_key}}'
+# zencoder_test_mode: True
+
+# backups
+# db_backups_enabled: False
+
+# customize
+# madek_webapp_html_extra_head_start: |
+#   <!--
+#        __       __                  __            __
+#   /  \     /  |                /  |          /  |
+#   26132  \   /26132 |  ______    ____26132 |  ______  26132 |   __
+#   26132$  \ /26132$ | /      \  /    26132 | /      \ 26132 |  /  |
+#   2613226132  /2613226132 | 261322613226132  |/261322613226132$ |/261322613226132  |26132 |_/26132/
+#   26132 26132 26132/26132 | /    26132 |26132 |  26132 |26132    26132 |26132   26132<
+#   26132 |26132$/ 26132 |/261322613226132$ |26132 \__26132 |26132261322613226132/ 261322613226132  #   26132 | $/  26132 |26132    26132 |26132    26132 |26132       |26132 | 26132  |
+#   26132/      26132/  261322613226132$/  261322613226132$/  261322613226132$/ 26132/   26132/
+#
+#   -->
+
+# madek_webapp_html_extra_head_end: |
+#   <link rel=stylesheet type=text/css href=/local-theme.css>
