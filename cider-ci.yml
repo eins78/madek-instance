@@ -41,6 +41,11 @@ jobs:
               start_when: {after: {script_key: check-head-of-master}}
               body: git submodule update --init Madek && cd Madek && git submodule update --init --recursive deploy
 
+            certbot:
+              start_when: {after: {script_key: deploy}}
+              body: |
+                ssh 'certbot run -n --apache --redirect --hsts --uir --strict-permissions -d street.ars.is'
+
             customize:
               start_when: {after: {script_key: deploy}}
               body: scp -P21984 extensions/local-theme.css root@zhdk.kiste.li:/madek/server/webapp/public/assets/local-theme.css
