@@ -1,0 +1,150 @@
+html *, html *:after, html *:before {
+  background-image: none !important;
+  background: transparent !important;
+
+  border-color: black !important;
+  border-radius: 0 !important;
+  border-width: 2px !important;
+
+  box-shadow: none !important;
+  text-shadow: initial !important;
+  color: initial !important;
+}
+
+body :not(i){
+/*   font-family: "Fira Mono", "Consolas", "Menlo", "Monaco", "Courier", monospace !important; */
+/*   font-family: monospace !important; */
+}
+
+a:hover, a:hover *, a:hover *:before,
+button:hover, button:hover *, button:hover *:before{
+  color: blue !important;
+  border-color: blue !important;
+}
+
+.primary-button {
+  font-weight: bold !important;
+}
+
+header { border-top: 4px solid black !important }
+header .ui-tabs { padding-bottom: 6px }
+footer { border-bottom: 4px solid black !important }
+
+.ui-tile__flags,
+.ui-header-user > .tertiary-button,
+[data-action="root"][data-view="application"] .pitch-login {
+  display: none !important;
+}
+
+.ui-container, .separated, .separator,
+.ui-modal-head, .ui-modal-body, .ui-modal-footer,
+.ui-side-filter-filterset, .ui-side-filter-search, .ui-side-filter-item {
+  border: none !important;
+}
+
+.modal,
+.ui-home-claim,
+.ui-drop-menu {
+  background: white !important;
+}
+
+.modal-backdrop { background-color: black !important;}
+
+
+
+.ui-side-filter-lvl3-item.active * {
+  background-color: black !important;
+  color: white !important;
+}
+
+
+input {
+  font-weight: bold !important;
+  border-top: none !important; border-right: none !important;
+}
+button, .button, .primary-button, .tertiary-button,
+button  *, .button  *, .button-primary  *, .button-tertiary  *,
+.ui-tag-cloud-item, .ui-tag-cloud-item * {
+  opacity: 1 !important;
+  border-top: none !important; border-left: none !important; border-right: none !important;
+}
+.button.active, .button-primary.active, .button-tertiary.active {
+  border-bottom: none !important;
+}
+
+
+div.ui-tile__foot {
+  background: white !important;
+}
+
+
+
+.ui-body-title {
+	margin-right: 1em !important;
+}
+.ui-body-title-label h1 {
+    white-space: initial !important;
+    font-weight: bold !important;
+}
+.ui-body-title-label h1 i::before {
+    display: none;
+}
+
+
+
+.ui-tabs-item > * {
+  border: none !important;
+  border-bottom: 2px solid black !important;
+}
+.ui-tabs-item.active > * {
+  border-bottom: none !important;
+}
+.tab-content {
+  border: none !important;
+}
+
+
+.ui-thumbnail.media-entry .ui-thumbnail-image-holder,
+.ui-thumbnail .ui-thumbnail-image-holder .ui-thumbnail-table-image-holder .ui-thumbnail-cell-image-holder{
+  height: 130px !important;
+  top: 0 !important;
+}
+.ui-resources.miniature .ui-thumbnail.media-entry .ui-thumbnail-image-holder,
+.ui-resources.miniature  .ui-thumbnail .ui-thumbnail-image-holder .ui-thumbnail-table-image-holder .ui-thumbnail-cell-image-holder {
+  height: 50px !important;
+}
+.ui-thumbnail-image-wrapper { padding: 0 ; background: black !important; }
+.ui-thumbnail .ui-thumbnail-image {
+  max-height: 135px !important; max-width: 135px !important;
+}
+.ui-resources.miniature .ui-thumbnail .ui-thumbnail-image {
+  max-height: 50px !important; max-width: 50px !important;
+}
+
+.ui-thumbnail-meta-title {
+  height: initial !important;
+  max-height: 34px !important;
+}
+
+.ui-thumbnail.media-catalog .ui-thumbnail-image-holder,
+.ui-thumbnail.media-catalog .ui-thumbnail-image-holder .ui-thumbnail-table-image-holder .ui-thumbnail-cell-image-holder {
+/*   height: 100% !important; */
+}
+.ui-thumbnail.media-catalog .ui-thumbnail-image {
+  max-height: 240px !important; max-width: 330px !important;
+}
+.ui-thumbnail.media-catalog .ui-thumbnail-meta .ui-thumbnail-meta-extension {
+  background: white !important;
+  font-weight: bold !important;
+  line-height: 2em !important;
+}
+.ui-thumbnail.media-catalog .ui-thumbnail-meta .ui-thumbnail-meta-extension:after {
+	content: '×';
+	font-s
+}
+.ui-tag-counter {
+  border: none !important;
+}
+.ui-tag-counter:after {
+	content: '×';
+}
