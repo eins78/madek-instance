@@ -30,6 +30,18 @@ header { border-top: 4px solid black !important }
 header .ui-tabs { padding-bottom: 6px }
 footer { border-bottom: 4px solid black !important }
 
+body[data-uberadmin] {
+  border: 1.5em solid transparent;
+  background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 1.5em,
+      $red 1.5em,
+      $red 3em
+    ),
+    $body-background;
+}
+
 .ui-tile__flags,
 .ui-header-user > .tertiary-button,
 [data-action="root"][data-view="application"] .pitch-login {
