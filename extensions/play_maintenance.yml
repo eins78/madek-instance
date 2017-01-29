@@ -1,0 +1,21 @@
+---
+- name: Maintenance
+  hosts: madek
+  tasks:
+    - name: test connection
+      ping:
+
+    - apt: pkg={{item}} state=latest update_cache=no
+      with_items: [python-httplib2]
+
+    - name: Run ruby script
+      uri:
+        url: "{{madek_configuration_management_url}}"
+        timeout: 300
+        user: system_admin
+        password: "{{secret_key_base}}"
+        force_basic_auth: yes
+        method: POST
+        HEADER_Content-Type: application/ruby
+        return_content: yes
+        body: "{{lookup('file', ruby_script)}}"
