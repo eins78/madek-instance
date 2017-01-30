@@ -110,3 +110,17 @@ sh -c "echo \"$(cat examples/git-crypt/group_vars_secret_example.yml)\"" > group
 git add group_vars/secrets.yml && git commit -m 'add encrypted secrets'
 git crypt status
 ```
+
+## HTTPS
+
+Secure Communications for your users (HTTPS) can be enabled
+by obtaining a TLS certificate and configure apache to use it.
+This can be done easily using `certbot` by [LetsEncrypt](https://letsencrypt.org).
+
+
+1. Install `certbot`: `sudo apt-get install python-certbot-apache -t jessie-backports`
+2. Get cert: `certbot certonly --apache -d madek.example.com`
+3. Configure apache: `certbot run -n --apache --redirect --apache-vhost-root /etc/apache2/madek -d madek.example.com`
+  - even more secure (SSL Labs `A+` instead of `A`): `certbot run -n --apache --redirect --hsts --uir --strict-permissions --apache-vhost-root /etc/apache2/madek -d madek.example.com`
+
+Also **re-run step 3 after each deploy**!
