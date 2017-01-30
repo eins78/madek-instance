@@ -44,8 +44,8 @@ jobs:
             certbot:
               start_when: {after: {script_key: deploy}}
               body: |
-                ssh 'certbot run -n --apache --redirect --hsts --uir --strict-permissions -d street.ars.is'
+                ssh street.ars.is 'certbot run -n --apache --redirect --hsts --uir --strict-permissions -d street.ars.is'
 
             customize:
               start_when: {after: {script_key: deploy}}
-              body: scp -P21984 extensions/local-theme.css root@zhdk.kiste.li:/madek/server/webapp/public/assets/local-theme.css
+              body: scp extensions/local-theme.css street.ars.is:/madek/server/webapp/public/assets/local-theme.css
