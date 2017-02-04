@@ -160,3 +160,7 @@ div.ui-tile__foot {
 .ui-tag-counter:after {
 	content: '×';
 }
+
+#app-client-error, .error-message, .error-message p {
+  font-family: monospace !important;
+}
