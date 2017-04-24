@@ -20,7 +20,7 @@ data = <<-YAML
     mappings:
     - IPTC:Province-State
 
-  - id: iptc_core_country_code
+  - id: country_code
     title: Country Code
     type: keyword
     mappings:

@@ -34,7 +34,8 @@ MediaEntry.all.each do |e|
         end
 
         kws = terms.map do |term|
-          term = Keyword.find_or_create_by!(term: term, meta_key: mk)
+          term = Keyword.find_or_create_by!(
+            term: term, meta_key: mk, rdf_class: mk.allowed_rdf_class)
         end
         mdkw = MetaDatum::Keywords.new(md_attr.merge(keywords: kws))
         mdkw.meta_data_keywords.each do |mdk|
