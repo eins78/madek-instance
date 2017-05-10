@@ -62,7 +62,7 @@ secret to the repository in encrypted form (*recommended*).
 
 1. update `Madek` submodule reference to latest release
   - either by accepting a Pull Request (when enabled)
-  - or manually: `./scripts/update_madek_latest release`
+  - or manually: `./scripts/update_madek_latest stable`
 
 1. run the setup playbook again: `ansible-playbook -i hosts Madek/deploy/play_setup-and-deploy.yml`
 
@@ -123,4 +123,5 @@ This can be done easily using `certbot` by [LetsEncrypt](https://letsencrypt.org
 3. Configure apache: `certbot run -n --apache --redirect --apache-vhost-root /etc/apache2/madek -d madek.example.com`
   - even more secure (SSL Labs `A+` instead of `A`): `certbot run -n --apache --redirect --hsts --uir --strict-permissions --apache-vhost-root /etc/apache2/madek -d madek.example.com`
 
-Also **re-run step 3 after each deploy**!
+If a certificate set up this way is found on the server, the deploy process will automatically use `certbot` for configuration with recommended settings.
+You only have to re-run `certbot` yourself after each deploy if you prefer other settings.
