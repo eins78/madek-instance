@@ -1,8 +1,9 @@
 #!/bin/sh -exu
 CHANNEL=$1
 
-cd Madek
+git submodule init ./Madek
+cd ./Madek
 git fetch
 git submodule foreach --recursive 'git reset --hard HEAD'
 git reset --hard "origin/${CHANNEL}"
-git submodule update --recursive deploy
+git submodule update --recursive --force deploy
